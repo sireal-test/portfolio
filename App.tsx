@@ -44,19 +44,22 @@ const App: React.FC = () => {
           <div className="relative bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-[2.5rem] shadow-2xl animate-in zoom-in-95 fade-in duration-300">
             <button 
               onClick={() => setSelectedProject(null)}
-              className="absolute top-8 right-8 z-10 p-2 bg-white/80 backdrop-blur rounded-full hover:bg-gray-100 transition-colors shadow-sm"
+              className="absolute top-8 right-8 z-20 p-2 bg-white/80 backdrop-blur rounded-full hover:bg-gray-100 transition-colors shadow-sm"
             >
               <X size={24} />
             </button>
 
-            <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className="h-64 md:h-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 h-full">
+              {/* Image Side - Fixed to prevent cutting off */}
+              <div className="h-[40vh] md:h-auto bg-gray-50 flex items-center justify-center overflow-hidden border-r border-gray-100">
                 <img 
                   src={selectedProject.image} 
                   alt={selectedProject.title} 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain p-4 md:p-8"
                 />
               </div>
+              
+              {/* Content Side */}
               <div className="p-8 md:p-14">
                 <div className="mb-6">
                   <span className="px-3 py-1 bg-[#e2f3e4] text-[10px] font-bold uppercase tracking-widest rounded-full text-green-800">
@@ -77,7 +80,7 @@ const App: React.FC = () => {
                     </p>
                   )}
 
-                  {/* Partners Section - Redesigned as requested */}
+                  {/* Partners Section */}
                   {selectedProject.partnersList && (
                     <div className="pt-8 border-t border-gray-100">
                       <div className="flex items-center gap-2 mb-6 text-gray-400">

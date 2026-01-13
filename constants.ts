@@ -62,7 +62,7 @@ export const PROJECTS: ProjectItem[] = [
       "커리어 플랫폼 협업",
       "대학 취업지원센터"
     ],
-    image: "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?auto=format&fit=crop&q=80&w=800"
+    image: "https://raw.githubusercontent.com/sireal-test/portfolio/4cf90a123507d6fecdeebca6b07ff583e7a39a8f/19_notion_face.png"
   },
   {
     id: "3",
